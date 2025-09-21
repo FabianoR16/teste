@@ -22,7 +22,7 @@ main {
     width: 100%;
     min-height: 1500px;
     background-color: whitesmoke;
-    padding: 20px;
+    padding: 20px;  /* ✅ padding geral resolve os "left" */
 }
 
 h1 {
@@ -70,10 +70,13 @@ h1 {
     margin: 0 30px 30px 0;
 }
 
+.optional-list {
+    padding-left: 20px; /* ✅ lista bem alinhada */
+}
+
 .optional-list li {
-    list-style: none;
     margin-bottom: 5px;
-    width: 200px;
+    list-style-type: none;
 }
 
 input[type="text"],
@@ -133,5 +136,8 @@ textarea {
     input, textarea {
         width: 100%;
         max-width: 100%;
+    }
+    .optional-list {
+        padding-left: 15px; /* ✅ ainda bem alinhada no celular */
     }
 }
