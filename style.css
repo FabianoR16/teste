@@ -22,7 +22,7 @@ main {
     width: 100%;
     min-height: 1500px;
     background-color: whitesmoke;
-    padding: 20px;  /* ✅ padding geral resolve os "left" */
+    padding: 20px;
 }
 
 h1 {
@@ -65,20 +65,41 @@ h1 {
     display: inline-block;
 }
 
+/* ---------------- LISTAS ---------------- */
 .optional-box {
-    display: inline-block;
-    margin: 0 30px 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .optional-list {
-    padding-left: 20px; /* ✅ lista bem alinhada */
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 .optional-list li {
-    margin-bottom: 5px;
-    list-style-type: none;
+    display: flex;              /* input + texto lado a lado */
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
+.optional-list input[type="checkbox"],
+.optional-list input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+/* --- GRID de duas colunas no desktop --- */
+@media (min-width: 600px) {
+    .optional-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 20px;
+    }
+}
+
+/* ---------------- INPUTS ---------------- */
 input[type="text"],
 input[type="number"],
 input[type="date"],
@@ -96,6 +117,7 @@ textarea {
   color: #d80835;
 }
 
+/* ---------------- BOTÃO ---------------- */
 #enviar{
     padding: 20px 60px;
     font-size: 15px;
@@ -113,7 +135,7 @@ textarea {
     color: black;
 }
 
-/* Responsividade */
+/* ---------------- RESPONSIVIDADE ---------------- */
 @media only screen and (max-width: 500px) {
     header {
         text-align: center;
@@ -138,6 +160,6 @@ textarea {
         max-width: 100%;
     }
     .optional-list {
-        padding-left: 15px; /* ✅ ainda bem alinhada no celular */
+        display: block; /* força lista em 1 coluna no celular */
     }
 }
