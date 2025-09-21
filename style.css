@@ -133,6 +133,9 @@ textarea {
     .block {
     width: 30%;
     height: 40px;
-}
 
+    .h2-main {
+        letter-spacing: 1.0px;
+}
+}
 }
