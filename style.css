@@ -128,9 +128,11 @@ textarea {
     main{
         width: 100%;
         position: relative;
+        overflow-x: hidden;
     }
     .block {
     width: 30%;
     height: 40px;
 }
+
 }
